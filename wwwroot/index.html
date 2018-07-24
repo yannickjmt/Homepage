@@ -3,14 +3,68 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-        <title>Yannick Jamet</title>
-    <link rel="stylesheet" href="assets/stylesheets/main.css">
+    <title>Yannick Jamet</title>
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <script src="assets/scripts/main.js"></script>
   </head>
   <body>
     <div class="grid-container">
-      <header>Header</header>
-      <aside>Menu</aside>
-      <main>Body</main>
+      <header></header>
+      <aside class="flex-menu-container">
+        <div>
+          <input type="radio" id="tab-1" name="tab-group-1" checked>
+          <label for="tab-1">Tab One</label>
+        </div>
+        <div>
+            <input type="radio" id="tab-2" name="tab-group-1">
+            <label for="tab-2">Tab Two</label>
+        </div>
+        <div>
+          <input type="radio" id="tab-3" name="tab-group-1">
+          <label for="tab-3">Tab Three</label>
+        </div>
+      </aside>
+      <main>
+        <div class="content tab-1">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm
+          od tempor incididunt ut labore et dolore magna aliqua. Ut enim ad min
+          im veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+          ex ea commodo consequat. Duis aute irure dolor in reprehenderit in vo
+          luptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur 
+          sint occaecat cupidatat non proident, sunt in culpa qui officia deser
+          unt mollit anim id est laborum.
+        </div>
+        <div class="content tab-2">
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusa
+          ntium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab il
+          lo inventore veritatis et quasi architecto beatae vitae dicta sunt ex
+          plicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut 
+          odit aut fugit, sed quia consequuntur magni dolores eos qui ratione v
+          oluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
+           quia dolor sit amet, consectetur, adipisci velit, sed quia non numqu
+           am eius modi tempora incidunt ut labore et dolore magnam aliquam qua
+           erat voluptatem. Ut enim ad minima veniam, quis nostrum exercitation
+           em ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
+            consequatur? Quis autem vel eum iure reprehenderit qui in ea volupt
+          ate velit esse quam nihil molestiae consequatur, vel illum qui dolore
+          m eum fugiat quo voluptas nulla pariatur?
+        </div>
+        <div class="content tab-3">
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui blan
+            ditiis praesentium voluptatum deleniti atque corrupti quos dolores 
+            et quas molestias excepturi sint occaecati cupiditate non provident
+            , similique sunt in culpa qui officia deserunt mollitia animi, id e
+            st laborum et dolorum fuga. Et harum quidem rerum facilis est et ex
+            pedita distinctio. Nam libero tempore, cum soluta nobis est eligend
+            i optio cumque nihil impedit quo minus id quod maxime placeat facer
+            e possimus, omnis voluptas assumenda est, omnis dolor repellendus. 
+            Temporibus autem quibusdam et aut officiis debitis aut rerum necess
+            itatibus saepe eveniet ut et voluptates repudiandae sint et molesti
+            ae non recusandae. Itaque earum rerum hic tenetur a sapiente delect
+            us, ut aut reiciendis voluptatibus maiores alias consequatur aut pe
+            rferendis doloribus asperiores repellat
+        </div>
+      </main>
       <footer>Footer</footer>
     </div>
   </body>
