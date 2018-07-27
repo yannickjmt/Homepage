@@ -57,34 +57,35 @@ table {
 	width: 100vw;
 	height: 100vh;
 	grid-gap: 10px;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: 100px repeat(4, 1fr);
 	grid-template-rows: 0px 1fr 50px;
 	background-color: #ffffff;
 	/*padding: 10px;*/
 }
 
 header {
-	grid-column: span 10;
+	grid-column: span 5;
 	background-color: #c78787;
 }
 aside {
-	grid-column: span 2;
-	background-color: #c78787;
+	grid-column: 1;
+	background-color: black;
+	padding-top: 30px;
 }
 main {
 	position: relative;
-	grid-column: span 8;
+	grid-column: span 4;
 	background-color: #c78787;
 }
 footer {
-	grid-column: span 10;
+	grid-column: span 5;
 	background-color: #c78787;
 }
 
 .flex-menu-container {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-start;
 }
 
 /*
@@ -99,10 +100,103 @@ footer {
 	border: 1px solid #ccc;
 	top: 0;
 	bottom: 0;
+	/* width: 100%; */
 	z-index: -1;
 	margin-top: 0px;
+	font-family: Monaco, Arial;
 }
 
-.tab-1 {
+.menu-1 {
 	z-index: 1;
 }
+
+/*
+	Menu
+*/
+.menu-item {
+	/* border: 1px solid #fff; */
+	height: 100px;
+	position: relative;
+	/*overflow: hidden;  /*not sure if necessary */
+}
+
+/* TODO add browser prefixes -webkit- -moz- -o- */
+.menu-item:hover {
+	transform: translate(0px, 5px);
+}
+
+.menu-item [type=radio] {
+	display: none;
+}
+
+.menu-label {
+	/*border: 2px solid blue; */
+	height: 80px;
+	width: 100%;
+	position: absolute;
+	padding-top: 20px;
+	top: 0px;
+	cursor: pointer;
+	font-family: Arial;
+	font-size: 40px;
+	text-align: center;
+	/* justify-content: center; */
+	color: white;
+	z-index: 1;
+}
+
+/* TODO add browser prefixes -webkit- -moz- -o- */
+.menu-legend {
+	color: white;
+	position: absolute;
+	width: 100%;
+	text-align: center; 
+	top: 64px;
+	left: 80px;
+	font-family: Monaco, Arial;
+	font-size: 14px;
+	z-index: 0;
+	transition-property: left;
+	transition-duration: 0.1s;
+    transition-timing-function: linear;
+}
+#menu-2 ~ .menu-legend {
+	transition-duration: 0.15s; 
+}
+#menu-3 ~ .menu-legend {
+	transition-duration: 0.2s; 
+}
+#menu-4 ~ .menu-legend {
+	transition-duration: 0.25s; 
+}
+aside:hover .menu-legend {
+	left: 0px;
+}
+[type=radio]:checked ~ .menu-legend {
+	left: 0px;
+}
+
+/* TODO when checked, slightly darker color */
+/* TODO final color choice */
+#menu-1:checked ~ .menu-label,
+aside:hover #menu-1 ~ .menu-label {
+	color: red;
+}
+
+
+#menu-2:checked ~ .menu-label,
+aside:hover #menu-2 ~ .menu-label {
+	color: purple;
+}
+
+
+#menu-3:checked ~ .menu-label,
+aside:hover #menu-3 ~ .menu-label {
+	color: blue;
+}
+
+#menu-4:checked ~ .menu-label,
+aside:hover #menu-4 ~ .menu-label {
+	color: green;
+}
+

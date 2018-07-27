@@ -1,15 +1,15 @@
-//element.addEventListener(event, function, useCapture);
 "use strict";
 
 
 document.addEventListener("DOMContentLoaded", function(){
   
   // Modify z-index property of main content div
-  // 
-  const radios = document.getElementsByName("tab-group-1");
-  var previousDiv;
+  const radios = document.getElementsByName("menu-group-1");
+  var previousDiv; // stores the previous highlighted div
+
   for (let radio of radios) {
     if (radio.checked) previousDiv = document.getElementsByClassName(radio.id)[0];
+  
     radio.onchange = function() {
       previousDiv.style.zIndex = "-1";
       const selectedDiv = document.getElementsByClassName(this.id)[0];
@@ -17,4 +17,5 @@ document.addEventListener("DOMContentLoaded", function(){
       previousDiv = selectedDiv;
     }
   }
+  
 });
