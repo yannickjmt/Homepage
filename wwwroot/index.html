@@ -6,32 +6,47 @@
     <title>Yannick Jamet</title>
     <link rel="stylesheet" href="assets/styles/main.css">
     <script src="assets/scripts/main.js"></script>
+    <!-- 
+        * Font Awesome Free 5.2.0 by @fontawesome - https://fontawesome.com
+        * License - https://fontawesome.com/license (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+    -->
+    <script defer src="/assets/scripts/solid.js"></script>
+    <script defer src="/assets/scripts/regular.js"></script>
+    <script defer src="/assets/scripts/brands.js"></script>
+    <script defer src="/assets/scripts/fontawesome.min.js"></script>
   </head>
   <body>
     <div class="grid-container">
-      <header></header>
+      <!-- <header></header> -->
       <aside class="flex-menu-container">
         <nav>
           <ul>
             <li class="menu-item">
-
               <input type="radio" id="menu-1" name="menu-group-1" checked>
-              <label for="menu-1" class="menu-label">&#x2302;</label>
+              <label for="menu-1" class="menu-label">
+                <span class="fas fa-home"></span>
+              </label>
               <span class="menu-legend">HOME</span>
             </li>
             <li class="menu-item">
               <input type="radio" id="menu-2" name="menu-group-1">
-              <label for="menu-2" class="menu-label">&#x270E;</label>
+              <label for="menu-2" class="menu-label">
+                <span class="far fa-address-card"></span>
+              </label>
               <span class="menu-legend">ABOUT</span>
             </li>
             <li class="menu-item">
               <input type="radio" id="menu-3" name="menu-group-1">
-              <label for="menu-3" class="menu-label">&#x2668;</label>
+              <label for="menu-3" class="menu-label">
+                <span class="fas fa-code"></span>
+              </label>
               <span class="menu-legend">CODE</span>
             </li>
             <li class="menu-item">
               <input type="radio" id="menu-4" name="menu-group-1">
-              <label for="menu-4" class="menu-label">#</label>
+              <label for="menu-4" class="menu-label">
+                <span class="fas fa-at"></span>
+              </label>
               <span class="menu-legend">CONTACT</span>
             </li>
           </ul>
@@ -39,15 +54,20 @@
       </aside>
       <main>
         <div class="content menu-1">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm
-          od tempor incididunt ut labore et dolore magna aliqua. Ut enim ad min
-          im veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-          ex ea commodo consequat. Duis aute irure dolor in reprehenderit in vo
-          luptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur 
-          sint occaecat cupidatat non proident, sunt in culpa qui officia deser
-          unt mollit anim id est laborum.
+          <!-- <h1>&#x2302;</h1> -->
+          <h2>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm
+            od tempor incididunt ut labore et dolore magna aliqua. Ut enim ad min
+            im veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+            ex ea commodo consequat. Duis aute irure dolor in reprehenderit in vo
+            luptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur 
+            sint occaecat cupidatat non proident, sunt in culpa qui officia deser
+            unt mollit anim id est laborum.
+          </h2>
         </div>
         <div class="content menu-2">
+          <!-- <h1>&#x270E;</h1> -->
+          <h2>
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusa
           ntium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab il
           lo inventore veritatis et quasi architecto beatae vitae dicta sunt ex
@@ -61,8 +81,11 @@
             consequatur? Quis autem vel eum iure reprehenderit qui in ea volupt
           ate velit esse quam nihil molestiae consequatur, vel illum qui dolore
           m eum fugiat quo voluptas nulla pariatur?
+          </h2>
         </div>
         <div class="content menu-3">
+          <!-- <h1>&#x2668;</h1> -->
+          <h2>
             At vero eos et accusamus et iusto odio dignissimos ducimus qui blan
             ditiis praesentium voluptatum deleniti atque corrupti quos dolores 
             et quas molestias excepturi sint occaecati cupiditate non provident
@@ -76,14 +99,30 @@
             ae non recusandae. Itaque earum rerum hic tenetur a sapiente delect
             us, ut aut reiciendis voluptatibus maiores alias consequatur aut pe
             rferendis doloribus asperiores repellat
+          </h2>
         </div>
         <div class="content menu-4">
-            email
-            linkedin
-            github
+          <!-- <h1>#</h1> -->
+          <!-- <div class="contact-item item-1">
+            <span class="far fa-envelope"></span>
+          </div> -->
+          <a class="contact-item item-1" href="mailto:yjamet@gmail.com" title="Email me">
+            <span class="far fa-envelope"></span>
+          </a>
+          <a class="contact-item item-2" href="https://github.com/yannickjmt" title="Github" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+          <a class="contact-item item-3" href="https://www.linkedin.com/in/yjamet/" title="Linkedin" target="_blank">
+            <span class="fab fa-linkedin"></span>
+          </a>
+          <a class="contact-item item-4" href="skype:yannick_jamet?chat" title="Contact me on Skype">
+            <span class="fab fa-skype"></span>
+          </a>
+
         </div>
       </main>
-      <footer>Footer</footer>
+      <!-- <footer>Footer</footer> -->
     </div>
   </body>
 </html>
+
