@@ -113,13 +113,33 @@ main {
 	top: 0px;
 	bottom: 0px;
 	z-index: -1;
-	font-family: Lato,Helvetica,Arial,sans-serif;
+	font-family: verdana,Helvetica,Arial,sans-serif;;
+	/* font-family: Lato,Helvetica,Arial,sans-serif; */
 }
 
 .menu-1 {
 	z-index: 1;
 }
 
+.content a {
+	text-decoration: none;
+}
+.content a:hover {
+	font-weight: 600;
+}
+
+/* h1, h2, h3, h4, h5, h6 {
+	font-family: Lato,MontSerrat,Tahoma,Arial,sans-serif;
+}  */
+
+h1 {
+	font-size: 40px;
+	text-align: center;
+	padding-bottom: 30px;
+}
+h5 {
+	text-align: center;
+}
 /* h1 {
 	font-family: Arial;
 	font-size: 40px;
@@ -147,9 +167,7 @@ main {
 .menu-4 > h1 {
 	color: green;
 } */
-h2 {
-	border: 1px solid blue;
-}
+
 
 /*
 	Menu
@@ -220,24 +238,31 @@ aside:hover .menu-legend {
 /* TODO final color choice */
 #menu-1:checked ~ .menu-label,
 aside:hover #menu-1 ~ .menu-label {
-	color: red;
+	color: #ff2200;
 }
 
+/* a.menu-link-2 {
+	color: #D000E8;
+	font-size: 30px;
+} */
 
 #menu-2:checked ~ .menu-label,
-aside:hover #menu-2 ~ .menu-label {
-	color: purple;
+aside:hover #menu-2 ~ .menu-label,
+a.menu-link-2 {
+	color: #E008E8;
 }
 
 
 #menu-3:checked ~ .menu-label,
-aside:hover #menu-3 ~ .menu-label {
-	color: blue;
+aside:hover #menu-3 ~ .menu-label,
+a.menu-link-3 {
+	color: #2604FF;
 }
 
 #menu-4:checked ~ .menu-label,
-aside:hover #menu-4 ~ .menu-label {
-	color: green;
+aside:hover #menu-4 ~ .menu-label,
+a.menu-link-4 {
+	color: #049CE8;
 }
 
 /* 

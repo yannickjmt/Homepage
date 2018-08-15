@@ -19,3 +19,12 @@ document.addEventListener("DOMContentLoaded", function(){
   }
   
 });
+
+const changeNav = function (menuIndex) {
+  var event = document. createEvent('Event');
+  var radio = document.getElementById(menuIndex);
+
+  event.initEvent('change', true, false);
+  radio.checked = true;
+  radio.dispatchEvent(event);
+}
