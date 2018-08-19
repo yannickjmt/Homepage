@@ -50,7 +50,9 @@ table {
 
 
 /*
+	========================================
 	Grid & Flexbox
+	========================================
 */
 .grid-container {
 	display: grid;
@@ -99,78 +101,9 @@ main {
 }
 
 /*
-	Main Content
-*/
-
-.content {
-	box-sizing: border-box;
-	position: absolute;
-	padding: 20px;
-	/* border-style: solid none none solid;
-	border-image: linear-gradient(to bottom right, #000, #fff 50%) 10 ;
-	border-width: 2px; */
-	width: 100%;
-	top: 0px;
-	bottom: 0px;
-	z-index: -1;
-	font-family: verdana,Helvetica,Arial,sans-serif;;
-	/* font-family: Lato,Helvetica,Arial,sans-serif; */
-}
-
-.menu-1 {
-	z-index: 1;
-}
-
-.content a {
-	text-decoration: none;
-}
-.content a:hover {
-	font-weight: 600;
-}
-
-/* h1, h2, h3, h4, h5, h6 {
-	font-family: Lato,MontSerrat,Tahoma,Arial,sans-serif;
-}  */
-
-h1 {
-	font-size: 40px;
-	text-align: center;
-	padding-bottom: 30px;
-}
-h5 {
-	text-align: center;
-}
-/* h1 {
-	font-family: Arial;
-	font-size: 40px;
-	width: 50px;
-	height: 50px;
-	top: -25px;
-	left: -25px;
-	text-align: center;
-	vertical-align: middle;
-	border: 2px solid #000;
-	border-radius: 50%;
-	position: absolute;
-	background: #fff;
-}
-.menu-1 > h1 {
-	color: red;
-	font-size: 46px;
-}
-.menu-2 > h1 {
-	color: purple;
-}
-.menu-3 > h1 {
-	color: blue;
-}
-.menu-4 > h1 {
-	color: green;
-} */
-
-
-/*
+	========================================
 	Menu
+	========================================
 */
 .menu-item {
 	/* border: 1px solid #fff; */
@@ -234,39 +167,131 @@ aside:hover .menu-legend {
 	left: 0px;
 }
 
-/* TODO when checked, slightly darker color */
-/* TODO final color choice */
 #menu-1:checked ~ .menu-label,
 aside:hover #menu-1 ~ .menu-label {
 	color: #ff2200;
 }
 
-/* a.menu-link-2 {
-	color: #D000E8;
-	font-size: 30px;
-} */
-
 #menu-2:checked ~ .menu-label,
 aside:hover #menu-2 ~ .menu-label,
 a.menu-link-2 {
-	color: #E008E8;
+	color: #2604FF;
 }
 
 
 #menu-3:checked ~ .menu-label,
 aside:hover #menu-3 ~ .menu-label,
 a.menu-link-3 {
-	color: #2604FF;
+	color: #049CE8;
 }
 
 #menu-4:checked ~ .menu-label,
 aside:hover #menu-4 ~ .menu-label,
 a.menu-link-4 {
-	color: #049CE8;
+
+	color: #E008E8;
+}
+
+/*
+	========================================
+	Main Content
+	========================================
+*/
+
+.content {
+	box-sizing: border-box;
+	position: absolute;
+	padding: 1.2rem;
+	/* border-style: solid none none solid;
+	border-image: linear-gradient(to bottom right, #000, #fff 50%) 10 ;
+	border-width: 2px; */
+	width: 100%;
+	top: 0px;
+	bottom: 0px;
+	z-index: -1;
+	font-family: verdana,Helvetica,Arial,sans-serif;;
+	/* font-family: Lato,Helvetica,Arial,sans-serif; */
+}
+
+.menu-1 {
+	z-index: 1;
+}
+
+.content a {
+	text-decoration: none;
+}
+.content a:hover {
+	font-weight: 600;
+}
+
+/* h1, h2, h3, h4, h5, h6 {
+	font-family: Lato,MontSerrat,Tahoma,Arial,sans-serif;
+}  */
+
+h1 {
+	font-size: 2.5rem;
+	text-align: center;
+	padding-bottom: 2rem;
+}
+h5 {
+	text-align: center;
 }
 
 /* 
+	========================================
+	Collapsible
+	========================================
+ */
+input.collapsible-toggle  {
+	display: none;
+}
+.collapsible-toggle-label {
+	display: block;
+	border: 1px solid #2604FF;
+	border-radius: 0.4rem;
+	font-weight: bold;
+	padding: 0.5rem 0.5rem 0.5rem 0.2rem;
+	cursor: pointer;
+	transition: all 0.25s ease-in-out;
+}
+.collapsible-toggle-label:hover {
+	color: white;
+	background-color: #2604FF;
+}
+.collapsible-toggle-label::before {
+	content: '\25BA';
+	display: inline-block;
+	text-align: left;
+	margin-right: 1rem;
+	transition: transform .2s ease-out;
+}
+.collapsible-content {
+	margin-left: 0.6rem;
+	border-left: 2px dashed #2604FF;
+	border-bottom-left-radius: 0.4rem;
+	border-bottom-right-radius: 0.4rem;
+	max-height: 0px;
+	overflow: hidden;
+	background-color: rgba( 38, 4, 255, .1);
+	transition: max-height 0.25s ease-in-out;
+}
+.collapsible-content-inner {
+	padding: 0.5rem 1rem;
+}
+.collapsible-toggle:checked + .collapsible-toggle-label + .collapsible-content {
+	max-height: 20rem;
+}
+.collapsible-toggle:checked + .collapsible-toggle-label::before {
+	transform: rotate(90deg);
+}
+.collapsible-toggle:checked + .collapsible-toggle-label {
+	border-bottom-right-radius: 0;
+}
+
+/* 
+	========================================
 	Contact
+	========================================
  */
 /* TODO browser prefixes on transition */
  .contact-item {
@@ -279,7 +304,7 @@ a.menu-link-4 {
 	color: white;
 	background-color: #d7d7d7;
 	transition-property: color, background-color;
-	transition-duration: 0.3s;
+	transition-duration: 0.5s;
 }
 .item-1 {
 	align-self: center;
@@ -316,63 +341,3 @@ a.menu-link-4 {
 	background-color: white;
 	color: #00AFF0;
 }
-
-
- /* Fade */
-.hvr-fade {
-	display: inline-block;
-	vertical-align: middle;
-	-webkit-transform: perspective(1px) translateZ(0);
-	transform: perspective(1px) translateZ(0);
-	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-	overflow: hidden;
-	-webkit-transition-duration: 0.3s;
-	transition-duration: 0.3s;
-	-webkit-transition-property: color, background-color;
-	transition-property: color, background-color;
-  }
-  .hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
-	background-color: #2098D1;
-	color: white;
-  }
-
-/* Rectangle Out */
-.hvr-rectangle-out {
-	display: inline-block;
-	vertical-align: middle;
-	-webkit-transform: perspective(1px) translateZ(0);
-	transform: perspective(1px) translateZ(0);
-	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-	position: relative;
-	background: #e1e1e1;
-	-webkit-transition-property: color;
-	transition-property: color;
-	-webkit-transition-duration: 0.3s;
-	transition-duration: 0.3s;
-  }
-  .hvr-rectangle-out:before {
-	content: "";
-	position: absolute;
-	z-index: -1;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: #2098D1;
-	-webkit-transform: scale(0);
-	transform: scale(0);
-	-webkit-transition-property: transform;
-	transition-property: transform;
-	-webkit-transition-duration: 0.3s;
-	transition-duration: 0.3s;
-	-webkit-transition-timing-function: ease-out;
-	transition-timing-function: ease-out;
-  }
-  .hvr-rectangle-out:hover, .hvr-rectangle-out:focus, .hvr-rectangle-out:active {
-	color: white;
-  }
-  .hvr-rectangle-out:hover:before, .hvr-rectangle-out:focus:before, .hvr-rectangle-out:active:before {
-	-webkit-transform: scale(1);
-	transform: scale(1);
-  }
-
