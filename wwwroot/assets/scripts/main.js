@@ -1,11 +1,10 @@
 "use strict";
 
-
 document.addEventListener("DOMContentLoaded", function(){
   
-  // Modify z-index property of main content div
+  // Modifies z-index property of main content div
   const radios = document.getElementsByName("menu-group-1");
-  var previousDiv; // stores the previous highlighted div
+  var previousDiv; // Stores the previous highlighted div
 
   for (let radio of radios) {
     if (radio.checked) previousDiv = document.getElementsByClassName(radio.id)[0];
@@ -20,8 +19,9 @@ document.addEventListener("DOMContentLoaded", function(){
   
 });
 
+// Navigation from menu-1 div
 const changeNav = function (menuIndex) {
-  var event = document. createEvent('Event');
+  var event = document.createEvent('Event');
   var radio = document.getElementById(menuIndex);
 
   event.initEvent('change', true, false);

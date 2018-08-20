@@ -65,7 +65,8 @@ table {
 	/*padding: 10px;*/
 }
 
-/* header {
+/* 
+	header {
 	grid-column: span 5;
 	background-color: #c78787;
 } */
@@ -100,19 +101,19 @@ main {
 	grid-template-rows: 1fr 1fr;
 }
 
+
 /*
 	========================================
 	Menu
 	========================================
 */
 .menu-item {
-	/* border: 1px solid #fff; */
 	height: 100px;
 	position: relative;
 	/*overflow: hidden;  /*not sure if necessary */
 }
 
-/* TODO add browser prefixes -webkit- -moz- -o- */
+/* TODO: add browser prefixes -webkit- -moz- -o- */
 .menu-item:hover {
 	transform: translate(0px, 5px);
 }
@@ -122,7 +123,6 @@ main {
 }
 
 .menu-label {
-	/*border: 2px solid blue; */
 	height: 80px;
 	width: 100%;
 	position: absolute;
@@ -136,7 +136,7 @@ main {
 	z-index: 1;
 }
 
-/* TODO add browser prefixes -webkit- -moz- -o- */
+/* TODO: add browser prefixes -webkit- -moz- -o- */
 .menu-legend {
 	color: white;
 	position: absolute;
@@ -202,19 +202,19 @@ a.menu-link-4 {
 	box-sizing: border-box;
 	position: absolute;
 	padding: 1.2rem;
-	/* border-style: solid none none solid;
-	border-image: linear-gradient(to bottom right, #000, #fff 50%) 10 ;
-	border-width: 2px; */
 	width: 100%;
 	top: 0px;
 	bottom: 0px;
 	z-index: -1;
 	font-family: verdana,Helvetica,Arial,sans-serif;;
-	/* font-family: Lato,Helvetica,Arial,sans-serif; */
 }
 
 .menu-1 {
 	z-index: 1;
+}
+
+p {
+	padding: 0.1rem;
 }
 
 .content a {
@@ -224,14 +224,15 @@ a.menu-link-4 {
 	font-weight: 600;
 }
 
-/* h1, h2, h3, h4, h5, h6 {
-	font-family: Lato,MontSerrat,Tahoma,Arial,sans-serif;
-}  */
 
 h1 {
 	font-size: 2.5rem;
 	text-align: center;
 	padding-bottom: 2rem;
+}
+h3 {
+	font-size: 1.2rem;
+	padding-bottom: 1rem;
 }
 h5 {
 	text-align: center;
@@ -247,16 +248,15 @@ input.collapsible-toggle  {
 }
 .collapsible-toggle-label {
 	display: block;
-	border: 1px solid #2604FF;
 	border-radius: 0.4rem;
 	font-weight: bold;
 	padding: 0.5rem 0.5rem 0.5rem 0.2rem;
 	cursor: pointer;
 	transition: all 0.25s ease-in-out;
+	border: 1px solid;
 }
 .collapsible-toggle-label:hover {
 	color: white;
-	background-color: #2604FF;
 }
 .collapsible-toggle-label::before {
 	content: '\25BA';
@@ -267,12 +267,12 @@ input.collapsible-toggle  {
 }
 .collapsible-content {
 	margin-left: 0.6rem;
-	border-left: 2px dashed #2604FF;
+	border-left: 2px dashed;
+	border-right: 2px dashed;
 	border-bottom-left-radius: 0.4rem;
 	border-bottom-right-radius: 0.4rem;
 	max-height: 0px;
 	overflow: hidden;
-	background-color: rgba( 38, 4, 255, .1);
 	transition: max-height 0.25s ease-in-out;
 }
 .collapsible-content-inner {
@@ -288,12 +288,41 @@ input.collapsible-toggle  {
 	border-bottom-right-radius: 0;
 }
 
+/* Custom colors */
+.menu-2 .collapsible-toggle-label {
+	border-color: #2604FF;
+}
+.menu-2 .collapsible-content {
+	border-color: #2604FF;
+	background-color: rgba( 38, 4, 255, .1);
+}
+.menu-2 .collapsible-toggle-label:hover {
+	background-color: #2604FF;
+}
+.menu-2 .collapsible-toggle:checked + .collapsible-toggle-label + .collapsible-content:last-child {
+	border-bottom: 2px dashed #2604FF;
+}
+
+.menu-3 .collapsible-toggle-label {
+	border-color: #049CE8;
+}
+.menu-3 .collapsible-content {
+	border-color: #049CE8;
+	background-color: rgba( 4, 156, 232, .1);
+}
+.menu-3 .collapsible-toggle-label:hover {
+	background-color: #049CE8;
+}
+.menu-3 .collapsible-toggle:checked + .collapsible-toggle-label + .collapsible-content:last-child {
+	border-bottom: 2px dashed #049CE8;
+}
+
 /* 
 	========================================
 	Contact
 	========================================
  */
-/* TODO browser prefixes on transition */
+/* TODO: browser prefixes on transition */
  .contact-item {
 	font-size: 112px;
 	text-align: center;
@@ -306,6 +335,7 @@ input.collapsible-toggle  {
 	transition-property: color, background-color;
 	transition-duration: 0.5s;
 }
+
 .item-1 {
 	align-self: center;
 	justify-self: center;
