@@ -3,6 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Yannick Jamet</title>
     <link rel="stylesheet" href="assets/styles/main.css">
     <script src="assets/scripts/main.js"></script>
@@ -18,41 +19,36 @@
   </head>
   <body>
     <div class="grid-container">
-      <!-- <header></header> -->
-      <aside class="flex-menu-container">
-        <nav>
-          <ul>
-            <li class="menu-item">
-              <input type="radio" id="menu-1" name="menu-group-1" checked>
-              <label for="menu-1" class="menu-label">
-                <span class="fas fa-home"></span>
-              </label>
-              <span class="menu-legend">HOME</span>
-            </li>
-            <li class="menu-item">
-              <input type="radio" id="menu-2" name="menu-group-1">
-              <label for="menu-2" class="menu-label">
-                <span class="far fa-address-card"></span>
-              </label>
-              <span class="menu-legend">ABOUT</span>
-            </li>
-            <li class="menu-item">
-              <input type="radio" id="menu-3" name="menu-group-1">
-              <label for="menu-3" class="menu-label">
-                <span class="fas fa-code"></span>
-              </label>
-              <span class="menu-legend">CODE</span>
-            </li>
-            <li class="menu-item">
-              <input type="radio" id="menu-4" name="menu-group-1">
-              <label for="menu-4" class="menu-label">
-                <span class="fas fa-at"></span>
-              </label>
-              <span class="menu-legend">CONTACT</span>
-            </li>
-          </ul>
-        </nav>
-      </aside>
+      <div class="flex-menu-container">
+        <div class="menu-item">
+          <input type="radio" id="menu-1" name="menu-group-1" checked>
+          <label for="menu-1" class="menu-label">
+            <span class="fas fa-home"></span>
+          </label>
+          <span class="menu-legend">HOME</span>
+        </div>
+        <div class="menu-item">
+          <input type="radio" id="menu-2" name="menu-group-1">
+          <label for="menu-2" class="menu-label">
+            <span class="far fa-address-card"></span>
+          </label>
+          <span class="menu-legend">ABOUT</span>
+        </div>
+        <div class="menu-item">
+          <input type="radio" id="menu-3" name="menu-group-1">
+          <label for="menu-3" class="menu-label">
+            <span class="fas fa-code"></span>
+          </label>
+          <span class="menu-legend">CODE</span>
+        </div>
+        <div class="menu-item">
+          <input type="radio" id="menu-4" name="menu-group-1">
+          <label for="menu-4" class="menu-label">
+            <span class="fas fa-at"></span>
+          </label>
+          <span class="menu-legend">CONTACT</span>
+        </div>
+      </div>
       <main>
         <div class="content menu-1">
           <h1>Bonjour!</h1>
@@ -139,17 +135,24 @@
         <div class="content menu-3">
           <div class="collapsible-wrapper">
             <input id="clps-menu3" type="checkbox" class="collapsible-toggle" checked>
-            <label for="clps-menu3" class="collapsible-toggle-label">Codewars</label>
+            <label for="clps-menu3" class="collapsible-toggle-label">MapMonde</label>
             <div class="collapsible-content">
               <div class="collapsible-content-inner">
                 <p>
-                  Solving fun problems on Codewars.
-                </p>
+                  Dynamic world map built with data queried from the World Bank Open Data API.
+                  <a href="https://mapmonde.netlify.com/" title="Demo" target="_blank">DEMO</a> / 
+                  <a href="https://github.com/yannickjmt/MapMonde" title="Github Repo" target="_blank">Github</a>
+                 </p>
+                <ul>
+                  <li>Multi asynchronous API queries in parralel (async/await)</li>
+                  <li>Quick and easy navigation between years and indicators</li>  
+                  <li>A choice of different cartography-adapted palettes of colors</li>
+                </ul>
                 <p>
-                  <a href="https://www.codewars.com/users/yannickjmt/" title="CodeWars Profile" target="_blank">
-                    <!-- <img src="https://www.codewars.com/users/yannickjmt/badges/large" alt="CodeWars Profile"> -->
-                    <img src="assets/images/small.svg" alt="CodeWars Profile">
-                  </a>
+                  JS ES6: <span class="keywords">Async/Await, Modules, Ajax, JSON</span>
+                  <br>CSS3: <span class="keywords">SVG styling, Animations, Transitions, Responsive Design</span>
+                  <br>Bundling and Packaging: <span class="keywords">Webpack</span>
+                  </span>
                 </p>
               </div>
             </div>
@@ -158,34 +161,37 @@
             <div class="collapsible-content">
               <div class="collapsible-content-inner">
                 <p>
-                  Exploring CSS3 using no Javascript.
-                  <br>CSS Grid, Flexbox, Animation, Responsive.
-                  <br><a href="https://githublink" title="Github" target="_blank">Github</a>.
+                  Exploring CSS3 without JS (when possible). <a href="https://githublink" title="Github" target="_blank">Github</a>
+                </p>
+                <p>
+                  CSS3: <span class="keywords">Grid, Flexbox, Animations, Responsive Design</span>
                 </p>
               </div>
             </div>
             <input id="clps-menu3-3" type="checkbox" class="collapsible-toggle" checked>
-            <label for="clps-menu3-3" class="collapsible-toggle-label">MapMonde</label>
+            <label for="clps-menu3-3" class="collapsible-toggle-label">Codewars</label>
             <div class="collapsible-content">
               <div class="collapsible-content-inner">
                 <p>
-                  Dynamic world map built from the World Bank Open Data API.
-                  <a href="https://mapmonde.netlify.com/" title="Demo" target="_blank">DEMO</a>
-                 </p>
-                <ul>
-                  <li>Multi indicator asynchronous queries in parralel (async/await)</li>
-                  <li>Quick and easy navigation between years and indicators</li>  
-                  <li>A curated list of 35 of the most relevant indicators.</li>
-                  <li>A choice of different cartography-adapted palettes of colors</li>
-                </ul>
+                  Solving fun coding challenge on Codewars in JavaScript.
+                </p>
+                <a href="https://www.codewars.com/users/yannickjmt/" title="CodeWars Profile" target="_blank">
+                  <!-- <img src="https://www.codewars.com/users/yannickjmt/badges/large" alt="CodeWars Profile"> too slow to load -->
+                  <img src="assets/images/small.svg" alt="CodeWars Profile">
+                </a>
+              </div>
+            </div>
+            <input id="clps-menu3-4" type="checkbox" class="collapsible-toggle" checked>
+            <label for="clps-menu3-4" class="collapsible-toggle-label">@ KDS</label>
+            <div class="collapsible-content">
+              <div class="collapsible-content-inner">
                 <p>
-                  Built and packaged with webpack.
-                  <br>
-                  <a href="https://github.com/yannickjmt/MapMonde" title="Github Repo" target="_blank">Github</a>.
+                  Data import/export in PL/SQL (Oracle DB).
+                  <br>Workflow scripting in JavaScript.
+                  <br>Front end customisation with HTML, CSS, JavaScript on the C# ASP.net Framework.
                 </p>
               </div>
             </div>
-
           </div>
         </div>
         <div class="content menu-4">
@@ -204,7 +210,6 @@
 
         </div>
       </main>
-      <!-- <footer>Footer</footer> -->
     </div>
   </body>
 </html>
