@@ -198,6 +198,12 @@ a.menu-link-4 {
 	========================================
 */
 
+html, body {
+	overflow: hidden;
+	width: 100vw;
+	height: 100vh;
+}
+
 .content {
 	box-sizing: border-box;
 	position: absolute;
@@ -211,6 +217,9 @@ a.menu-link-4 {
 
 .menu-1 {
 	z-index: 1;
+}
+.menu-2, menu-3 {
+	overflow-y: auto;
 }
 
 p {
@@ -315,6 +324,21 @@ input.collapsible-toggle  {
 }
 .menu-3 .collapsible-toggle:checked + .collapsible-toggle-label + .collapsible-content:last-child {
 	border-bottom: 2px dashed #049CE8;
+}
+
+.collapsible-content p {
+	padding: 0.5rem;
+}
+.collapsible-content ul {
+	list-style-type: disc;
+	list-style-position: inside;
+}
+.collapsible-content li {
+	padding-left: 0.7rem;
+	padding-bottom: 0rem;
+}
+.collapsible-content a {
+	color: #2604FF;
 }
 
 /* 
