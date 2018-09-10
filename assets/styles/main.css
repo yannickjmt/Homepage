@@ -364,7 +364,7 @@ input.collapsible-toggle  {
 	padding: 0.5rem 1rem;
 }
 .collapsible-toggle:checked + .collapsible-toggle-label + .collapsible-content {
-	max-height: 20rem;
+	max-height: 100%;
 }
 .collapsible-toggle:checked + .collapsible-toggle-label::before {
 	transform: rotate(90deg);
